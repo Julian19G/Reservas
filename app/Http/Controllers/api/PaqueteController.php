@@ -14,8 +14,8 @@ class PaqueteController extends Controller
      */
     public function index()
     {
-        $paquetes = Paquete::all();
-        return json_encode(['paquetes' => $paquetes]);
+        $paquetes = Paquete::orderBy('nombre')->get();
+        return response()->json($paquetes);
     }
 
     /**
