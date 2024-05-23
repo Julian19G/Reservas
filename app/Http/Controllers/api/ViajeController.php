@@ -10,7 +10,8 @@ class ViajeController extends Controller
 {
     public function index()
     {
-        $viajes = Viaje::with(['cliente', 'paquete'])->get();
+        $viajes = Viaje::with('paquete', 'cliente')->get();
+
         return response()->json(['viajes' => $viajes]);
     }
 
