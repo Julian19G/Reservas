@@ -11,6 +11,7 @@ class Pago extends Model
     protected $table = 'pagos';
 
     public $timestamps = false;
+
     public function viaje()
     {
         return $this->belongsTo(Viaje::class, 'id_viaje');

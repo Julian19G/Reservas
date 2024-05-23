@@ -18,11 +18,11 @@ Route::get('/clientes/{id}', [ClienteController::class, 'show']);
 Route::put('/clientes/{id}', [ClienteController::class, 'update']);
 Route::delete('/clientes/{id}', [ClienteController::class, 'destroy']);
 
+Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.index');
 Route::post('/pagos', [PagoController::class, 'store'])->name('pagos.store');
-Route::get('/pagos', [PagoController::class, 'index'])->name('pagos');
-Route::delete('/pagos/{id}', [PagoController::class, 'destroy'])->name('pagos.destroy');
 Route::get('/pagos/{id}', [PagoController::class, 'show'])->name('pagos.show');
 Route::put('/pagos/{id}', [PagoController::class, 'update'])->name('pagos.update');
+Route::delete('/pagos/{id}', [PagoController::class, 'destroy'])->name('pagos.destroy');
 
 Route::post('/paquetes', [PaqueteController::class, 'store'])->name('paquetes.store');
 Route::get('/paquetes', [PaqueteController::class, 'index'])->name('paquetes');
