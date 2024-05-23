@@ -36,8 +36,8 @@ Route::delete('/promociones/{promocion}', [PromocionController::class, 'destroy'
 Route::get('/promociones/{promocion}', [PromocionController::class, 'show'])->name('promociones.show');
 Route::put('/promociones/{promocion}', [PromocionController::class, 'update'])->name('promociones.update');
 
-Route::post('/viajes', [ViajeController::class, 'store'])->name('viajes.store');
 Route::get('/viajes', [ViajeController::class, 'index'])->name('viajes');
-Route::delete('/viajes/{viaje}', [ViajeController::class, 'destroy'])->name('viajes.destroy');
-Route::get('/viajes/{viaje}', [ViajeController::class, 'show'])->name('viajes.show');
-Route::put('/viajes/{viaje}', [ViajeController::class, 'update'])->name('viajes.update');
+Route::post('/viajes', [ViajeController::class, 'store'])->name('viajes.store');
+Route::get('/viajes/{id}', [ViajeController::class, 'show'])->name('viajes.show');
+Route::put('/viajes/{id}', [ViajeController::class, 'update'])->name('viajes.update');
+Route::delete('/viajes/{id}', [ViajeController::class, 'destroy'])->name('viajes.destroy');

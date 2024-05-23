@@ -12,6 +12,13 @@ class Promocion extends Model
 
     public $timestamps = false;
 
+    protected $fillable = [
+        'id_paquete',
+        'descuento',
+        'fecha_inicio',
+        'fecha_fin'
+    ];
+
     public function paquete()
     {
         return $this->belongsTo(Paquete::class, 'id_paquete');
